@@ -19,5 +19,12 @@ def calc():
             print("공백으로 구분하여 자연수들을 입력해야 합니다!")
         if len(num_list) > 1:
             break  
+    while True:
+        choice = int(input(choose_op))
+        if choice >= 0 and choice < num_ops:
+            result =  ops.op(choice, num_list)
+            print(f"{num_list}의 {ops_name[int(choice)]} : {result}")
+        else:
+            break 
 if __name__ == "__main__":
     calc()
