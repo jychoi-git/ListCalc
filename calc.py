@@ -10,6 +10,14 @@ print("연산 종류")
 for i in range(num_ops):
     print(f"{i} : {ops_name[i]}")
 def calc():
-    pass
+    while True:
+        try:
+            str_list = input("공백으로 구분하여 2개 이상의 자연수(양의 정수)를 입력하세요 : ")
+            num_list = list(map(int, str_list.split()))
+            print(num_list)
+        except ValueError:
+            print("공백으로 구분하여 자연수들을 입력해야 합니다!")
+        if len(num_list) > 1:
+            break  
 if __name__ == "__main__":
     calc()
