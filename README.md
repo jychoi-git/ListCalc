@@ -18,3 +18,6 @@ Python 3.8
 
 ## 프로그램 사용법
 `python calc.py`
+
+## 이용허락
+MIT 허가서
