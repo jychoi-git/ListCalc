@@ -25,8 +25,12 @@ def calc():
         if choice >= 0 and choice < num_ops:
             result =  ops.op(choice, num_list)
             print(f"{num_list}의 {ops_name[int(choice)]} : {result}")
+            redo = input("다른 연산을 선택하겠습니까? (y/n): ")
+            if redo == "n":
+                print("종료합니다.")
+                break
+
         else:
-            print("종료합니다.")
-            break 
+            print("틀린 선택입니다.")
 if __name__ == "__main__":
     calc()
