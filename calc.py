@@ -26,6 +26,7 @@ def calc():
             result =  ops.op(choice, num_list)
             print(f"{num_list}의 {ops_name[int(choice)]} : {result}")
         else:
+            print("종료합니다.")
             break 
 if __name__ == "__main__":
     calc()
