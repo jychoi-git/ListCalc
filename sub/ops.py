@@ -26,4 +26,8 @@ def op(i, list):
         return  sum(x for x in list if x % 2 == 0)
     if i == 11: # 홀수합
         return  sum(x for x in list if x % 2 == 1)
+    if i == 12: # 최빈값 
+        return max(set(list), key=list.count)
+
+
         
