@@ -26,4 +26,16 @@ def op(i, list):
         return  sum(x for x in list if x % 2 == 0)
     if i == 11: # 홀수합
         return  sum(x for x in list if x % 2 == 1)
+    if i == 12: # 최빈값
+        freq = {}
+        for x in list:
+            freq[x] = freq.get(x, 0) + 1
+        max_count = max(freq.values())
+        return min([k for k,v in freq.items() if v == max_count])
+    if i == 13: # 중앙값(중위수)
+        s = sorted(list)
+        n = len(s)
+        return s[n//2] if n % 2 == 1 else (s[n//2 - 1] + s[n//2]) / 2
+    if i == 14: # 범위
+        return  max(list) - min(list)
         
